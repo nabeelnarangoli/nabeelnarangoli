@@ -145,14 +145,15 @@ html.intro-lock, html.intro-lock body{ overflow:hidden; }
   clip-path:inset(-25% 100% -25% 0);
 }
 .intro__hi{
-  display:block; font-family:'Yellowtail',cursive; color:var(--text);
+  display:block; font-family:'Yellowtail',cursive; color:#fff;
+  text-shadow:0 2px 4px color-mix(in srgb, var(--bg) 95%, transparent), 0 0 16px color-mix(in srgb, var(--bg) 90%, transparent);
   font-size:clamp(22px, 2.5vw, 42px); line-height:1; margin-bottom:.1em;
 }
 .intro__name{
   display:block; font-family:'Yellowtail',cursive; line-height:1.05;
   font-size:clamp(40px, 5.3vw, 88px); white-space:nowrap;
-  color:color-mix(in srgb, var(--accent) 55%, #fff);
-  text-shadow:0 0 24px color-mix(in srgb, var(--accent) 70%, transparent);
+  color:#fff; -webkit-text-stroke:.6px var(--bg); paint-order:stroke fill;
+  text-shadow:0 2px 4px color-mix(in srgb, var(--bg) 95%, transparent), 0 0 14px color-mix(in srgb, var(--bg) 90%, transparent), 0 0 34px color-mix(in srgb, var(--bg) 85%, transparent);
 }
 .intro__card{
   margin-top:2.4vh; padding:16px 16px 16px;
