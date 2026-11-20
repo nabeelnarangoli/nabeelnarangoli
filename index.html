@@ -145,7 +145,7 @@ html.intro-lock, html.intro-lock body{ overflow:hidden; }
   clip-path:inset(-25% 100% -25% 0);
 }
 .intro__hi{
-  display:block; font-family:'Yellowtail',cursive; color:#fff;
+  display:block; font-family:'Yellowtail',cursive; color:var(--text);
   font-size:clamp(22px, 2.5vw, 42px); line-height:1; margin-bottom:.1em;
 }
 .intro__name{
@@ -170,21 +170,21 @@ html.intro-lock, html.intro-lock body{ overflow:hidden; }
   font-weight:600; color:#fff; margin-bottom:10px; letter-spacing:0;
 }
 .intro__paper{
-  background:rgba(247,251,249,.94); border-radius:10px; padding:12px 14px; min-height:7.4em;
+  background:var(--surface); border:1px solid var(--line-strong); border-radius:10px; padding:12px 14px; min-height:7.4em;
 }
 .intro__paper p{
   font-family:Georgia,'Times New Roman',serif; font-size:clamp(11.5px, .98vw, 14.5px);
-  line-height:1.5; color:#14201b; margin:0;
+  line-height:1.5; color:var(--text); margin:0;
 }
 .intro__badge{
   position:absolute; right:3vw; top:3.5vh; top:3.5svh;
   display:flex; flex-direction:column; align-items:flex-start;
-  background:#fff; color:#0a0d12; border-radius:14px; padding:9px 18px 10px;
-  box-shadow:0 12px 40px rgba(0,0,0,.4);
+  background:var(--surface); color:var(--text); border:1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius:14px; padding:9px 18px 10px;
+  box-shadow:0 12px 40px rgba(0,0,0,.4), 0 0 28px color-mix(in srgb, var(--accent) 22%, transparent);
   opacity:0; transform:scale(.4) rotate(-8deg);
 }
-.intro__badge b{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,2.4vw,38px); line-height:1; letter-spacing:-.02em; }
-.intro__badge span{ font-size:clamp(10px,.9vw,14px); font-weight:600; color:#3a4a44; margin-top:2px; }
+.intro__badge b{ color:var(--accent); font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,2.4vw,38px); line-height:1; letter-spacing:-.02em; }
+.intro__badge span{ font-size:clamp(10px,.9vw,14px); font-weight:600; color:var(--text-dim); margin-top:2px; }
 .intro__list{
   position:absolute; right:3vw; bottom:12vh; bottom:12svh; width:min(21vw, 310px);
   list-style:none; margin:0; padding:0;
@@ -192,7 +192,7 @@ html.intro-lock, html.intro-lock body{ overflow:hidden; }
 .intro__list li{
   display:flex; align-items:center; gap:.7em; padding:.5em 0;
   font-family:'Space Grotesk',sans-serif; font-weight:500;
-  font-size:clamp(12px, 1.12vw, 18px); line-height:1.2; color:#fff;
+  font-size:clamp(12px, 1.12vw, 18px); line-height:1.2; color:var(--text);
   opacity:0; transform:translateX(34px);
 }
 .intro__list svg{ width:1.35em; height:1.35em; flex:0 0 auto; filter:drop-shadow(0 0 8px currentColor); }
@@ -206,11 +206,11 @@ html.intro-lock, html.intro-lock body{ overflow:hidden; }
 }
 .intro__cue{
   display:flex; flex-direction:column; align-items:center; gap:10px;
-  font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.2em; color:rgba(255,255,255,.75);
+  font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.2em; color:var(--text-dim);
   opacity:0;
 }
 .intro__mouse{
-  width:20px; height:32px; border:1.5px solid rgba(255,255,255,.7); border-radius:12px; position:relative;
+  width:20px; height:32px; border:1.5px solid var(--text-dim); border-radius:12px; position:relative;
 }
 .intro__mouse::after{
   content:''; position:absolute; left:50%; top:6px; width:3px; height:6px; margin-left:-1.5px;
@@ -220,8 +220,8 @@ html.intro-lock, html.intro-lock body{ overflow:hidden; }
 .intro__skip{
   position:absolute; right:3vw; bottom:3vh; bottom:3svh; z-index:6;
   font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase;
-  color:rgba(255,255,255,.75); background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:9px 16px; cursor:pointer;
+  color:var(--text-dim); background:var(--surface);
+  border:1px solid var(--line-strong); border-radius:999px; padding:9px 16px; cursor:pointer;
   opacity:0; transition:background .3s var(--ease), border-color .3s var(--ease);
 }
 .intro__skip:hover{ background:rgba(255,255,255,.14); border-color:var(--accent); }
@@ -818,18 +818,18 @@ html[data-mode="create"] .hero__telemetry dd.mode-text--create{display:block;}
         </div>
         <div class="intro__badge"><b>15+</b><span>years Experience</span></div>
         <ul class="intro__list">
-        <li style="--i:0;color:var(--accent)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:#fff">Operations Leadership</span></li>
-        <li style="--i:1;color:#5aa9ff"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:#fff">Customer Success &amp; Support</span></li>
-        <li style="--i:2;color:#a07bff"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:#fff">Digital Marketing</span></li>
-        <li style="--i:3;color:#ff5ec8"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:#fff">Brand &amp; Social Media</span></li>
-        <li style="--i:4;color:#ff6b5a"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:#fff">Video, Photo &amp; Graphic Design</span></li>
-        <li style="--i:5;color:#ffd24a"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:#fff">AI Tools &amp; Automation</span></li>
+        <li style="--i:0;color:var(--accent)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:var(--text)">Operations Leadership</span></li>
+        <li style="--i:1;color:var(--accent)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:var(--text)">Customer Success &amp; Support</span></li>
+        <li style="--i:2;color:var(--accent)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:var(--text)">Digital Marketing</span></li>
+        <li style="--i:3;color:var(--accent)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:var(--text)">Brand &amp; Social Media</span></li>
+        <li style="--i:4;color:var(--accent)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:var(--text)">Video, Photo &amp; Graphic Design</span></li>
+        <li style="--i:5;color:var(--accent)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg><span style="color:var(--text)">AI Tools &amp; Automation</span></li>
         </ul>
       </div>
 
       <div class="intro__spark" style="left:62vw;top:20vh;width:28px;height:28px;color:var(--accent);--d:0s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg></div>
-      <div class="intro__spark" style="left:35vw;top:44vh;width:16px;height:16px;color:#5aa9ff;--d:.8s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg></div>
-      <div class="intro__spark" style="left:68vw;top:58vh;width:18px;height:18px;color:#ff5ec8;--d:1.5s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg></div>
+      <div class="intro__spark" style="left:35vw;top:44vh;width:16px;height:16px;color:var(--accent);--d:.8s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg></div>
+      <div class="intro__spark" style="left:68vw;top:58vh;width:18px;height:18px;color:var(--accent);--d:1.5s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C12.8 7 17 11.2 24 12C17 12.8 12.8 17 12 24C11.2 17 7 12.8 0 12C7 11.2 11.2 7 12 0Z"/></svg></div>
     </div>
 
     <div class="intro__wipe intro__wipe--a" aria-hidden="true"></div>
